@@ -2,7 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  font-size: 16px;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: rgb(0, 0, 0);
@@ -18,31 +18,27 @@ body {
   text-align: center;
 }
 
-.pageTitle {
-  font-style: oblique;
-  font-family: fangsong;
-  font-weight: bolder;
-  font-size: 600%;
-  font-stretch: expanded;
-  color: rgb(109, 0, 0);
-  text-shadow: rgb(255, 0, 0) 3px 3px;
-  text-rendering: optimizeLegibility;
-}
-
-.pageTitleSubText {
-  font-style: italic;
-  font-family: serif;
-  font-stretch: extra-expanded;
-  font-size: 200%;
-  color: rgb(136, 0, 0);
-  text-shadow: rgba(255, 0, 0, 0.87) 1px 1px;
-  text-rendering: optimizeLegibility;
-}
-
-.modeSelectors {
+button {
+  border: 2px solid rgb(124, 1, 1);
   border-radius: 30px;
-  border-color: red;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  margin: 3%;
+  color: rgb(124, 1, 1);
+  text-shadow: rgb(78,19,19) 1px 1px;
 }
 
+.companyTitle {
+   font-family: arial;
+   text-shadow: rgb(124, 1, 1) 2px 2px;
+   letter-spacing: 20px;
+   color: rgb(78, 19, 19);
+}
 
+.infoText {
+  font-family: courier;
+  text-shadow: rgb(124, 1, 1) 0.5px 0.5px;
+  letter-spacing: 0.2em;
+  color: rgb(78, 19, 19);
+}
