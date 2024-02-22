@@ -14,26 +14,68 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1};
+}
+
+@keyframes fadeOut {
+  from {opacity: 1}
+  to {opacity: 0};
+}
+
+div {
+  display: inline-block;
+  margin: 3%;
+}
+
+input {
+  background-color: black;
+  border: 3px rgb(0, 0, 0);  
+  text-align: center;
+  font-size: 1.3em;
+  border-radius: 30px;
+  padding: 3%;
+}
+
 body {
   text-align: center; 
-  height: 100vh;
-  width: 100vw;
+  height: 95vh;
+  width: 95vw;
 }
 
 button {
-  border: 3px solid rgb(99, 7, 7);
+  border: 3px solid rgb(90, 0, 0);
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0);
   font-size: 2em;
   letter-spacing: 0.1em;
   margin: 3%;
-  color: rgb(124, 1, 1);
-  text-shadow: rgb(0, 0, 0) 1px 1px;
+  color: rgb(59, 0, 0);
+  text-shadow: rgb(136, 0, 0) 1px 1px;
   width: 20%;
-  height: 10%;
+  height: 20%;
+}
+
+@keyframes buttonHover {
+  from {width: 20%; height: 20%; color: rgb(136, 0, 0); margin: 3%; font-size: 2em}
+  to {width: 23%; height: 23%; color: rgb(202, 2, 2); margin: 1.5%; font-size: 2.5em}
+}
+
+button:hover {
+  margin: 1.5%;
+  animation-name: buttonHover;
+  animation-duration: 0.2s;
+  border: 3px solid rgb(224, 0, 0);
+  color: rgb(202, 2, 2);
+  width: 23%;
+  height: 23%;
+  font-size: 2.5em;
 }
 
 .companyTitle {
+   animation-name: fadeIn;
+   animation-duration: 1s;
    font-family: arial;
    text-shadow: rgb(124, 1, 1) 2px 2px;
    letter-spacing: 20px;
@@ -42,6 +84,8 @@ button {
 }
 
 .infoText {
+  animation-name: fadeIn;
+  animation-duration: 3s;
   font-family: courier;
   text-shadow: rgb(124, 1, 1) 0.5px 0.5px;
   letter-spacing: 0.2em;
