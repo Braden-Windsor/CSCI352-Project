@@ -5,7 +5,7 @@
   font-size: 16px;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: linear-gradient(rgb(0, 0, 0), rgb(43, 5, 5));
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(2, 204, 204));
   height: 100%;
   width: 100%;
   font-synthesis: none;
@@ -45,29 +45,29 @@ body {
 }
 
 button {
-  border: 3px solid rgb(90, 0, 0);
+  border: 3px solid rgb(0, 0, 0);
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0);
   font-size: 2em;
   letter-spacing: 0.1em;
   margin: 3%;
-  color: rgb(59, 0, 0);
-  text-shadow: rgb(136, 0, 0) 1px 1px;
+  color: rgb(0, 0, 0);
+  text-shadow: rgb(0, 0, 0) 1px 1px;
   width: 20%;
   height: 20%;
 }
 
 @keyframes buttonHover {
-  from {width: 20%; height: 20%; color: rgb(136, 0, 0); margin: 3%; font-size: 2em}
-  to {width: 23%; height: 23%; color: rgb(202, 2, 2); margin: 1.5%; font-size: 2.5em}
+  from {width: 20%; height: 20%; color: rgb(0, 0, 0); margin: 3%; font-size: 2em}
+  to {width: 23%; height: 23%; color: rgb(2, 32, 202); margin: 1.5%; font-size: 2.5em}
 }
 
 button:hover {
   margin: 1.5%;
   animation-name: buttonHover;
   animation-duration: 0.2s;
-  border: 3px solid rgb(224, 0, 0);
-  color: rgb(202, 2, 2);
+  border: 3px solid rgb(0, 0, 0);
+  color: rgb(2, 32, 202);
   width: 23%;
   height: 23%;
   font-size: 2.5em;
@@ -77,9 +77,9 @@ button:hover {
    animation-name: fadeIn;
    animation-duration: 1s;
    font-family: arial;
-   text-shadow: rgb(124, 1, 1) 2px 2px;
+   text-shadow: rgb(0, 0, 0) 2px 2px;
    letter-spacing: 20px;
-   color: rgb(78, 19, 19);
+   color: rgb(0, 0, 0);
    font-size: 4.5em;
 }
 
@@ -87,9 +87,14 @@ button:hover {
   animation-name: fadeIn;
   animation-duration: 3s;
   font-family: courier;
-  text-shadow: rgb(124, 1, 1) 0.5px 0.5px;
+  text-shadow: rgb(0, 0, 0) 0.5px 0.5px;
   letter-spacing: 0.2em;
-  color: rgb(78, 19, 19);
+  color: rgb(0, 0, 0);
   margin-bottom: 5%;
   font-size: 2.5em;
+}
+
+.inputDescription {
+  color: rgb(0, 0, 0);
+  text-shadow: rgb(255, 255, 255).5px 0.5px;
 }

@@ -30,13 +30,25 @@ export default function App() {
         <h2 className="infoText">Receptionist Mode</h2>
         <span>
           <div>
-            <h3>Patient First Name</h3>
+            <h3 className="inputDescription">Patient First Name</h3>
             <form>
               <input></input>
             </form>
           </div>
           <div>
-            <h3>Patient Last Name</h3>
+            <h3 className="inputDescription">Patient Last Name</h3>
+            <form>
+              <input></input>
+            </form>
+          </div>
+          <div>
+            <h3 className="inputDescription">Patient SSN</h3>
+            <form>
+              <input></input>
+            </form>
+          </div>
+          <div>
+            <h3 className="inputDescription">Patient Date of Birth</h3>
             <form>
               <input></input>
             </form>
