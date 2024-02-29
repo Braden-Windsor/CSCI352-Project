@@ -5,9 +5,9 @@
   font-size: 16px;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: linear-gradient(rgb(255, 255, 255), rgb(2, 204, 204));
-  height: 100%;
-  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(background.png);
+  background-size: cover;
+  background-position: center;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,77 +24,110 @@
   to {opacity: 0};
 }
 
-div {
-  display: inline-block;
-  margin: 3%;
-}
-
-input {
-  background-color: black;
-  border: 3px rgb(0, 0, 0);  
-  text-align: center;
-  font-size: 1.3em;
-  border-radius: 30px;
-  padding: 3%;
-}
-
 body {
   text-align: center; 
   height: 95vh;
   width: 95vw;
 }
 
-button {
-  border: 3px solid rgb(0, 0, 0);
-  border-radius: 30px;
-  background-color: rgba(0, 0, 0, 0);
-  font-size: 2em;
-  letter-spacing: 0.1em;
-  margin: 3%;
-  color: rgb(0, 0, 0);
-  text-shadow: rgb(0, 0, 0) 1px 1px;
-  width: 20%;
-  height: 20%;
+.navbar{
+  width: 95%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-@keyframes buttonHover {
-  from {width: 20%; height: 20%; color: rgb(0, 0, 0); margin: 3%; font-size: 2em}
-  to {width: 23%; height: 23%; color: rgb(2, 32, 202); margin: 1.5%; font-size: 2.5em}
-}
-
-button:hover {
-  margin: 1.5%;
-  animation-name: buttonHover;
-  animation-duration: 0.2s;
-  border: 3px solid rgb(0, 0, 0);
-  color: rgb(2, 32, 202);
-  width: 23%;
-  height: 23%;
-  font-size: 2.5em;
-}
-
 .companyTitle {
-   animation-name: fadeIn;
-   animation-duration: 1s;
-   font-family: arial;
-   text-shadow: rgb(0, 0, 0) 2px 2px;
-   letter-spacing: 20px;
-   color: rgb(0, 0, 0);
-   font-size: 4.5em;
+  width: 120px;
+  cursor: pointer;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  font-family: sans-serif;
+  text-shadow: rgb(0, 0, 0) 2px 2px;
+  letter-spacing: 5px;
+  color: rgb(255, 255, 255);
+  font-size: 3.0em;
 }
 
-.infoText {
+.navbar p{
+  font-size: 20px;
+  list-style: none;
+  display: inline-block;
+  margin: 10 20px;
+  text-transform: uppercase;
   animation-name: fadeIn;
-  animation-duration: 3s;
-  font-family: courier;
-  text-shadow: rgb(0, 0, 0) 0.5px 0.5px;
-  letter-spacing: 0.2em;
-  color: rgb(0, 0, 0);
-  margin-bottom: 5%;
-  font-size: 2.5em;
+  animation-duration: 1s;
+}
+
+.content {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  width: 96%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-35%);
+  text-align: center;
+  color: #fff;
+}
+.content h2{
+  font-size: 40px;
+  margin-top: 80px;
+}
+
+.content p{
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+.spoon{
+  background: #009688;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+button:hover .spoon{
+  width: 100%;
+}
+
+button:hover{
+  border: none;
 }
 
 .inputDescription {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-shadow: rgb(255, 255, 255).5px 0.5px;
+}
+
+input {
+  background-color: rgb(255, 255, 255);
+  border: 5px rgb(0, 0, 0);  
+  text-align: center;
+  font-size: 1.3em;
+  border-radius: 20px;
+  padding: 3%;
 }

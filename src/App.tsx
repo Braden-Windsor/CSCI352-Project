@@ -15,18 +15,27 @@ export default function App() {
   function WelcomePage() {
     return (
       <body id="welcome">
-        <h1 className="companyTitle">InfirmAssist</h1>
-        <h2 className="infoText">Receptionist and Hospital Administration Software</h2>
-        <button onClick={()=>{onButtonClick("How to use")}}>How to use</button>
-        <button onClick={()=>{onButtonClick("Receptionist")}}>Receptionist</button>
-        <button onClick={()=>{onButtonClick("Analytics")}}>Analytics</button>
+        <div className="banner">
+          <div className="navbar">
+            <h1 className="companyTitle">InfirmAssist</h1>
+            <img src="" className="logo"></img>
+            <p>Receptionist and Hospital Administration Software</p>
+          </div>
+          <div className="content">
+            <h2 className="infoTextHome">WELCOME</h2>
+            <p>CLICK ANYWHERE BELOW TO GET STARTED</p>
+            <button onClick={()=>{onButtonClick("How to use")}}><span className="spoon"></span>About</button>
+            <button onClick={()=>{onButtonClick("Receptionist")}}><span className="spoon"></span>Receptionist</button>
+            <button onClick={()=>{onButtonClick("Analytics")}}><span className="spoon"></span>Analytics</button>
+          </div>
+        </div>
       </body>
     );
   }
   function ReceptionPage() {
     return (
       <body id="reception">
-        <h1 className="companyTitle">InfirmAssist</h1>
+        <h1 className="companyTitle1">InfirmAssist</h1>
         <h2 className="infoText">Receptionist Mode</h2>
         <span>
           <div>
