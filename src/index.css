@@ -123,11 +123,32 @@ button:hover{
   text-shadow: rgb(255, 255, 255).5px 0.5px;
 }
 
+.receptionInput {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+form {
+  width: 10%;
+  height: 5%;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin-left: 42.5%;
+}
+
 input {
   background-color: rgb(255, 255, 255);
+  color: black;
   border: 5px rgb(0, 0, 0);  
   text-align: center;
   font-size: 1.3em;
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 3%;
 }
+
+
