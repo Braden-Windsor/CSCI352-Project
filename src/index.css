@@ -30,7 +30,7 @@
   width: 95vw;
 }
 
-#reception {
+#patiententry {
   text-align: center; 
   height: 95vh;
   width: 95vw;
@@ -136,7 +136,7 @@ button:hover{
   justify-items: center;
 }
 
-form {
+#patientEntryInputs {
   width: 10%;
   height: 5%;
   text-align: center;
@@ -156,5 +156,6 @@ input {
   border-radius: 30px;
   padding: 3%;
 }
+
 
 
