@@ -21,7 +21,7 @@ server.use(express.urlencoded());
 
 server.get('*', (req, res) => {
     res.sendFile(indexPath.resolve(__dirname + '/../dist/index.html'))
-    db.connect(() => {
+    /*db.connect(() => {
         db.query('DELETE FROM PATIENT');
     });
     db.connect((err) => {
@@ -31,6 +31,7 @@ server.get('*', (req, res) => {
             console.log(result);
         });
     });
+    */
 });
 
 server.post('/', (req, res) => {
