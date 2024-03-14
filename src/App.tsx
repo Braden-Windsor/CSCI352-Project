@@ -50,12 +50,41 @@ function PatientEntryPage() {
   );
 }
 
+function PatientDirectoryPage(){
+  return(
+    <body id="patientdirectory">
+      <div className="container">
+        <h2 className="infoText">Patient Directory</h2>
+        <input type="text" placeholder="Search patients..." className="searchInput"></input>
+        <div className="patientList">
+          <div className="patientItem">
+            <h3>Trey Wright</h3>
+            <p>DOB: 12/04/2003</p>
+            <p>SSN: 123-45-6789</p>
+          </div>
+          <div className="patientItem">
+            <h3>Arden Stanley</h3>
+            <p>DOB: 02/31/2003</p>
+            <p>SSN: 922-62-2690</p>
+          </div>
+          <div className="patientItem">
+            <h3>Braden Windsor</h3>
+            <p>DOB: 09/01/2004</p>
+            <p>SSN: 420-65-4481</p>
+          </div>
+        </div>
+      </div>
+    </body>
+  );
+}
+
 export default function App() {
   return (
     <Router>
       <Routes>
-          <Route path='/' element={<WelcomePage />} />
-          <Route path='/PatientEntry' element={<PatientEntryPage />} />
+        <Route path='/' element={<WelcomePage />} />
+        <Route path='/PatientEntry' element={<PatientEntryPage />} />
+        <Route path='/PatientDirectory' element={<PatientDirectoryPage/>} />
       </Routes>
     </Router>
   );  
