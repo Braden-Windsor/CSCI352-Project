@@ -24,7 +24,7 @@
   to {opacity: 0};
 }
 
-#welcome {
+body {
   text-align: center; 
   height: 95vh;
   width: 95vw;
