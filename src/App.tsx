@@ -1,7 +1,5 @@
 import {useState} from 'react';
 
-
-
 export default function App() {
   const [page, setPage] = useState("Welcome");
   const onButtonClick = (page:string) => {
@@ -38,30 +36,19 @@ export default function App() {
         <h1 className="companyTitle1">InfirmAssist</h1>
         <h2 className="infoText">Receptionist Mode</h2>
         <span>
-          <div>
-            <h3 className="inputDescription">Patient First Name</h3>
-            <form>
-              <input></input>
+            <form action='/' method="post">
+              <h3 className="inputDescription">Patient First Name</h3>
+                <input type='text' name='firstname'></input>
+              <h3 className="inputDescription">Patient Last Name</h3>
+                <input type='text' name='lastname'></input>
+              <h3 className="inputDescription">Patient SSN</h3>
+                <input type='text' name='ssn'></input>
+              <h3 className="inputDescription">Patient Date of admittance</h3>
+                <input type='text' name='doa'></input>
+              <h3 className="inputDescription">Patient Date of Birth</h3>
+                <input type='text' name='dob'></input>
+              <button id="submit" type='submit'>submit</button>
             </form>
-          </div>
-          <div>
-            <h3 className="inputDescription">Patient Last Name</h3>
-            <form>
-              <input></input>
-            </form>
-          </div>
-          <div>
-            <h3 className="inputDescription">Patient SSN</h3>
-            <form>
-              <input></input>
-            </form>
-          </div>
-          <div>
-            <h3 className="inputDescription">Patient Date of Birth</h3>
-            <form>
-              <input></input>
-            </form>
-          </div>
         </span>
       </body>
     );
