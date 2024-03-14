@@ -2,11 +2,16 @@ const express = require('express')
 const server = express()
 const port = 3000
 
-const sqlite3 = require("sqlite3").verbose();
+let indexPath = require('path');
+let mysql = require('mysql2');
 
-
-var indexPath = require('path');
-
+let db = mysql.createConnection({
+    host: '127.0.0.1',
+    port: '3306',
+    user: 'root',
+    password: 'Awesomearden1234',
+    database: 'Infirmassist'
+});
 
 
 server.use(express.static(__dirname + "/../dist"));
@@ -14,14 +19,38 @@ server.use(express.static(__dirname + "/../dist"));
 server.use(express.json());
 server.use(express.urlencoded());
 
-server.get('/', (req, res) => {
-    res.sendFile(indexPath.resolve('../dist/index.html'))
-})
+server.get('*', (req, res) => {
+    res.sendFile(indexPath.resolve(__dirname + '/../dist/index.html'))
+    db.connect(() => {
+        db.query('DELETE FROM PATIENT');
+    });
+    db.connect((err) => {
+        if (err) throw err;
+        db.query('SELECT * FROM PATIENT', (err, result) => {
+            if (err) throw err;
+            console.log(result);
+        });
+    });
+});
 
 server.post('/', (req, res) => {
-    res.json(req.body);
-})
+    let data = req.body;
+    db.connect((err) => {
+        if (err) throw err;
+        db.query(`INSERT INTO PATIENT (Fname, Lname, ssn, doa, dob) VALUES ('${data.firstname}', '${data.lastname}', '${data.ssn}', '${data.doa}', '${data.dob}')`, (err) => {
+            if (err) throw err;
+        });
+    });
+    db.connect((err) => {
+        if (err) throw err;
+        db.query('SELECT * FROM PATIENT', (err, result) => {
+            if (err) throw err;
+            console.log(result);
+        });
+    });
+    res.sendFile(indexPath.resolve(__dirname + '/../dist/index.html'))
+});
 
 server.listen(port, () => {
     console.log(`Listening at http://localhost:${port}`)
-})
+});

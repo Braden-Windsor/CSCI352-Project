@@ -1,4 +1,30 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+
+
+
+function WelcomePage() {
+  return (
+    <body id="welcome">
+      <div className="banner">
+        <div className="navbar">
+          <h1 className="companyTitle">InfirmAssist</h1>
+          <img src="" className="logo"></img>
+          <p>Receptionist and Hospital Administration Software</p>
+        </div>
+        <div className="content">
+          <h2 className="infoTextHome">WELCOME</h2>
+          <p>CLICK ANYWHERE BELOW TO GET STARTED</p>
+          <form action='/PatientEntry'>
+            <button type='submit'><span className="spoon"></span>Patient Entry</button>
+          </form>
+          <form action='/PatientDirectory'>
+            <button type='submit'><span className="spoon"></span>Patient Directory</button>
+          </form>
+        </div>
+      </div>
+    </body>
+  );
+}
 
 function PatientEntryPage() {
   return (
@@ -24,36 +50,12 @@ function PatientEntryPage() {
   );
 }
 
-function WelcomePage() {
-  return (
-    <body id="welcome">
-      <div className="banner">
-        <div className="navbar">
-          <h1 className="companyTitle">InfirmAssist</h1>
-          <img src="" className="logo"></img>
-          <p>Receptionist and Hospital Administration Software</p>
-        </div>
-        <div className="content">
-          <h2 className="infoTextHome">WELCOME</h2>
-          <p>CLICK ANYWHERE BELOW TO GET STARTED</p>
-          <form action='/PatientEntry'>
-            <button><span className="spoon"></span>Patient Entry</button>
-          </form>
-          <form action='/PatientDirectory'>
-            <button><span className="spoon"></span>Patient Directory</button>
-          </form>
-        </div>
-      </div>
-    </body>
-  );
-}
-
 export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<WelcomePage />} />
-        <Route path='/PatientEntry' element={<PatientEntryPage />} />
+          <Route path='/' element={<WelcomePage />} />
+          <Route path='/PatientEntry' element={<PatientEntryPage />} />
       </Routes>
     </Router>
   );  
