@@ -51,7 +51,7 @@ function PatientEntryPage() {
 }
 
 function PatientDirectoryPage(){
-  //let data = fetch("/patientData").then((res) => {return res.json()})
+    //let data = fetch("/patientData").then((res) => {return res.json()});
   return(
     <body id="patientdirectory">
       <div className="container">
@@ -59,19 +59,9 @@ function PatientDirectoryPage(){
         <input type="text" placeholder="Search patients..." className="searchInput"></input>
         <div className="patientList">
           <div className="patientItem">
-            <h3>Trey Wright</h3>
+            <h3>{}</h3>
             <p>DOB: 2003-12-04</p>
             <p>SSN: 123-45-6789</p>
-          </div>
-          <div className="patientItem">
-            <h3>Arden Stanley</h3>
-            <p>DOB: 2003-02-31</p>
-            <p>SSN: 922-62-2690</p>
-          </div>
-          <div className="patientItem">
-            <h3>Braden Windsor</h3>
-            <p>DOB: 2004-09-01</p>
-            <p>SSN: 420-65-4481</p>
           </div>
         </div>
       </div>
