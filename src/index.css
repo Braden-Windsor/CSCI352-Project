@@ -24,25 +24,13 @@
   to {opacity: 0};
 }
 
-#welcome {
-  text-align: center; 
+#welcome, #login, #patiententry, #patientdirectory {
+  text-align: center;
   height: 95vh;
   width: 95vw;
 }
 
-#patiententry {
-  text-align: center; 
-  height: 95vh;
-  width: 95vw;
-}
-
-#patientdirectory {
-  text-align: center; 
-  height: 95vh;
-  width: 95vw;
-}
-
-.navbar{
+.navbar {
   width: 95%;
   margin: auto;
   padding: 35px 0;
@@ -50,6 +38,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .companyTitle {
   width: 120px;
   cursor: pointer;
@@ -62,11 +51,11 @@
   font-size: 3.0em;
 }
 
-.navbar p{
+.navbar p {
   font-size: 20px;
   list-style: none;
   display: inline-block;
-  margin: 10 20px;
+  margin: 10px 20px;
   text-transform: uppercase;
   animation-name: fadeIn;
   animation-duration: 1s;
@@ -82,12 +71,13 @@
   text-align: center;
   color: #fff;
 }
-.content h2{
+
+.content h2 {
   font-size: 40px;
   margin-top: 80px;
 }
 
-.content p{
+.content p {
   margin: 20px auto;
   font-weight: 100;
   line-height: 25px;
@@ -95,22 +85,22 @@
 
 button {
   width: 200px;
-  padding: 15px 0;
+  padding: 15px 0px;
   text-align: center;
-  margin: 20px 10px;
+  margin: 35px 25%; /* Center the button horizontally */
   border-radius: 25px;
   font-weight: bold;
   border: 2px solid #009688;
   background: transparent;
   color: #fff;
   cursor: pointer;
-  position: relative;
+  position: relative; /* Change position to relative */
   overflow: hidden;
   animation-name: fadeIn;
   animation-duration: 1s;
 }
 
-.spoon{
+.spoon {
   background: #009688;
   height: 100%;
   width: 0;
@@ -119,14 +109,14 @@ button {
   left: 0;
   bottom: 0;
   z-index: -1;
-  transition: 0.5s;
+  transition: width 0.5s; /* Update transition to only apply to width */
 }
 
-button:hover .spoon{
+button:hover .spoon {
   width: 100%;
 }
 
-button:hover{
+button:hover {
   border: none;
 }
 
@@ -142,7 +132,7 @@ button:hover{
 
 #patientEntryInputs {
   width: 10%;
-  height: 5%;
+  height: 65%;
   text-align: center;
   align-content: center;
   align-items: center;
@@ -154,13 +144,12 @@ button:hover{
 input {
   background-color: rgba(255, 255, 255, 0.25);
   color: rgb(255, 255, 255);
-  border: none; 
+  border: none;
+  text-align: relative;
   font-size: 1.3em;
   border-radius: 30px;
   padding: 10px 10px 10px 45px;
 }
-
-
 
 .container {
   max-width: 800px;
@@ -189,4 +178,99 @@ input {
   padding: 15px;
   border-radius: 10px;
   color: white;
+}
+
+.wrapper {
+  width: 420px;
+  margin: 185px 675px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(9px);
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+}
+
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.wrapper .input-box {
+  position: center;
+  width: 100%;
+  height: 50px;
+  margin: 20px 0;
+}
+
+.wrapper .input-box input {
+  width: 85%;
+  height: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px;
+}
+
+.wrapper .input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: 45px 0 0px;
+}
+
+.wrapper .remember-forgot label input {
+  accent-color: #fff;
+  margin-right: 3px;
+}
+
+.wrapper .remember-forgot a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.wrapper .remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.wrapper .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.wrapper .register-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.wrapper .register-link p a:hover {
+  text-decoration: underline;
 }
